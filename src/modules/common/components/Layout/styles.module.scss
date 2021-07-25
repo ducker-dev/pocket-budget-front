@@ -7,7 +7,7 @@ $fHeight: $footerHeight + $footerPT;
 .layout {
     min-height: calc(100vh - (#{$hHeight} + #{$fHeight}));
 
-    &.layoutBlack {
+    &.layoutDark {
         background-color: $color-black-three;
     }
 

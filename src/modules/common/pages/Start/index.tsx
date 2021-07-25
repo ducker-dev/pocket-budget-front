@@ -10,14 +10,14 @@ import {EThemeOptions} from "../../enums";
 
 export default function Start() {
     const activeTheme = useSelector(selectTheme);
-    const isThemeBlack = activeTheme === EThemeOptions.black;
+    const isThemeDark = activeTheme === EThemeOptions.dark;
 
     return (
         <Layout>
             <div className="container">
                 <div className={cn(
                     styles.start,
-                    {[styles.startBlack]: isThemeBlack},
+                    {[styles.startDark]: isThemeDark},
                 )}>
                     <div className="row">
                         <div className="skip-xxl-2 col-xxl-8 skip-xl-2 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xs-12">

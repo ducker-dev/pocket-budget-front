@@ -1,6 +1,11 @@
 export enum EThemeOptions {
     light = 'light',
-    black = 'black',
+    dark = 'dark',
+}
+
+export enum EThemeLogic {
+    user = 'user',
+    os = 'os',
 }
 
 export enum ELangOptions {

@@ -1,3 +1,5 @@
-# Selltech LLC - test task
+# pocket-budget-front
 
-Основой данного проекта является [Create React App](https://github.com/facebook/create-react-app).
+Данный проект является front-частью общего проекта "pocket-budget".
+
+### Скоро тут появится описания данного проекта

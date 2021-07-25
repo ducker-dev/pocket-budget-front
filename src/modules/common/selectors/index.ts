@@ -9,3 +9,7 @@ export function selectCommonModule(state: TState) {
 export function selectTheme(state: TState): TCommonState["theme"] {
     return selectCommonModule(state).theme;
 }
+
+export function selectThemeLogic(state: TState): TCommonState["themeLogic"] {
+    return selectCommonModule(state).themeLogic;
+}

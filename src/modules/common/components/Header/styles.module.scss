@@ -5,11 +5,15 @@
 .header {
     height: $headerHeight + $headerPB;
 
-    &.headerBlack {
+    &.headerDark {
         background-color: $color-black-three;
 
         & * {
             color: $color-white-one;
+        }
+
+        .headerSelectWrapper {
+            border: 1px solid $color-white-one;
         }
     }
 
@@ -33,4 +37,16 @@
 
 .headerLogo {
     margin-right: $size_16;
+}
+
+.headerSelectWrapper {
+    padding: $size_4;
+    border: 1px solid $color-black-three;
+}
+
+.headerSelect {
+    outline: none;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
 }

@@ -10,14 +10,14 @@ import cn from "classnames";
 
 export default function NotFound() {
     const activeTheme = useSelector(selectTheme);
-    const isThemeBlack = activeTheme === EThemeOptions.black;
+    const isThemeDark = activeTheme === EThemeOptions.dark;
 
     return (
         <Layout>
             <div className="container">
                 <div className={cn(
                     styles.notFound,
-                    {[styles.notFoundBlack]: isThemeBlack},
+                    {[styles.notFoundDark]: isThemeDark},
                 )}>
                     <div className={styles.notFoundTitle}>404</div>
                     <Link to={APP_ROUTES.COMMON.START}>Go to start page</Link>
