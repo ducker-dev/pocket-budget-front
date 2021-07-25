@@ -1,0 +1,17 @@
+@import "src/styles/colors";
+@import "src/styles/constants";
+
+$hHeight: $headerHeight + $headerPB;
+$fHeight: $footerHeight + $footerPT;
+
+.layout {
+    min-height: calc(100vh - (#{$hHeight} + #{$fHeight}));
+
+    &.layoutBlack {
+        background-color: $color-black-three;
+    }
+
+    &.layoutLight {
+        background-color: $color-white-one;
+    }
+}

@@ -1,0 +1,12 @@
+@import "src/styles/colors";
+@import "src/styles/constants";
+
+.profile {
+    &.profileBlack * {
+        color: $color-white-one;
+    }
+}
+
+.profileTitle {
+    margin-bottom: $size_24;
+}

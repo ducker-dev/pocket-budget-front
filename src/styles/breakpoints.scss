@@ -1,0 +1,40 @@
+$size-xs-min: 0;
+$size-sm-min: 576px;
+$size-md-min: 768px;
+$size-lg-min: 1024px;
+$size-xl-min: 1200px;
+$size-xxl-min: 1440px;
+
+$size-xs-max: $size-sm-min - 1px; // 575
+$size-sm-max: $size-md-min - 1px; // 767
+$size-md-max: $size-lg-min - 1px; // 1023
+$size-lg-max: $size-xl-min - 1px; // 1199
+$size-xl-max: $size-xxl-min - 1px; // 1439
+
+// Extra small screen / phone
+$xs-min: "(min-width: #{$size-xs-min})"; // 0 >
+$xs-max: "(max-width: #{$size-xs-max})"; // < 575
+$xs: "#{$xs-min} and #{$xs-max}"; // 0 >< 575
+
+// Small screen / phone
+$sm-min: "(min-width: #{$size-sm-min})"; // 576 >
+$sm-max: "(max-width: #{$size-sm-max})"; // < 767
+$sm: "#{$sm-min} and #{$sm-max}"; // 576 >< 767
+
+// Medium screen / tablet
+$md-min: "(min-width: #{$size-md-min})"; // 768 >
+$md-max: "(max-width: #{$size-md-max})"; // < 1023
+$md: "#{$md-min} and #{$md-max}"; // 768 >< 1023
+
+// Large screen / desktop
+$lg-min: "(min-width: #{$size-lg-min})"; // 1024 >
+$lg-max: "(max-width: #{$size-lg-max})"; // < 1199
+$lg: "#{$lg-min} and #{$lg-max}"; // 1024 >< 1199
+
+// Extra large screen / desktop
+$xl-min: "(min-width: #{$size-xl-min})"; // 1200 >
+$xl-max: "(max-width: #{$size-xl-max})"; // < 1439
+$xl: "#{$xl-min} and #{$xl-max}"; // 1200 >< 1439
+
+// Extra extra large screen / wide desktop
+$xxl: "(min-width: #{$size-xxl-min})"; // 1440 >

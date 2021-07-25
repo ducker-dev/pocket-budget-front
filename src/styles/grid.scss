@@ -1,0 +1,117 @@
+@import "src/styles/breakpoints";
+
+// Кол-во колонок
+$numberColumns: 12;
+
+// Отступы между колонок
+$gap_desktop: 20px;
+$gap_tablet: 20px;
+$gap_phone: 16px;
+
+// Отступы по краям колонок
+$indents_desktop: 40px;
+$indents_tablet: 32px;
+$indents_phone: 20px;
+
+// Размеры контейнеров
+$container_desktop: 1000px + ($indents_desktop * 2);
+$container_tablet: 648px + ($indents_tablet * 2);
+$container_phone: 100%;
+
+@mixin create-grid($type-width, $media-size) {
+    .container {
+        max-width: $media-size;
+    }
+
+    @for $i from 1 through $numberColumns {
+        .col-#{$type-width}-#{$i} {
+            width: (100% / $numberColumns) * $i;
+        }
+
+        .skip-#{$type-width}-#{$i} {
+            margin-left: (100% / $numberColumns) * $i;
+        }
+        .add-#{$type-width}-#{$i} {
+            margin-right: (100% / $numberColumns) * $i;
+        }
+    }
+}
+
+@media #{$xs} {
+    @include create-grid(xs, $container_phone);
+}
+@media #{$sm} {
+    @include create-grid(sm, $container_phone);
+}
+@media #{$md} {
+    @include create-grid(md, $container_tablet);
+}
+@media #{$lg} {
+    @include create-grid(lg, $container-desktop);
+}
+@media #{$xl} {
+    @include create-grid(xl, $container-desktop);
+}
+@media #{$xxl} {
+    @include create-grid(xl, $container-desktop);
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-fluid {
+    max-width: 100%;
+}
+
+.container,
+.container-fluid {
+    height: inherit;
+    min-height: inherit;
+
+    @media #{$xs}, #{$sm} {
+        padding: 0 $indents_phone;
+    }
+    @media #{$md} {
+        padding: 0 $indents_tablet;
+    }
+    @media #{$lg}, #{$xl}, #{$xxl}  {
+        padding: 0 $indents_desktop;
+    }
+}
+
+.row {
+    display: flex;
+
+    @media #{$xs}, #{$sm} {
+        margin: (-$gap_phone) (-$gap_phone/2) 0 (-$gap_phone/2);
+    }
+    @media #{$md} {
+        margin: (-$gap_tablet) (-$gap_tablet/2) 0 (-$gap_tablet/2);
+    }
+    @media #{$lg}, #{$xl}, #{$xxl} {
+        margin: (-$gap_desktop) (-$gap_desktop/2) 0 (-$gap_desktop/2);
+    }
+}
+
+.with-wrap {
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+div[class*="col"] {
+    @media #{$xs}, #{$sm} {
+        padding: $gap_phone $gap_phone/2 0 $gap_phone/2;
+    }
+    @media #{$md} {
+        padding: $gap_tablet $gap_tablet/2 0 $gap_tablet/2;
+    }
+    @media #{$lg}, #{$xl}, #{$xxl} {
+        padding: $gap_desktop $gap_desktop/2 0 $gap_desktop/2;
+    }
+}

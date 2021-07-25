@@ -1,0 +1,26 @@
+@import "src/styles/colors";
+@import "src/styles/constants";
+@import "src/styles/breakpoints";
+
+.footer {
+    height: $footerHeight + $footerPT;
+
+    &.footerBlack {
+        background-color: $color-black-three;
+
+        & * {
+            color: $color-white-one;
+        }
+    }
+
+    &.footerLight {
+        background-color: $color-white-one;
+    }
+}
+
+.footerContent {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: $footerPT;
+}

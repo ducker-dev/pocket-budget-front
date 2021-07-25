@@ -1,0 +1,23 @@
+@import "src/styles/colors";
+@import "src/styles/constants";
+
+.start {
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.startBlack * {
+        color: $color-white-one;
+    }
+}
+
+.startTitle {
+    text-align: center;
+    margin-bottom: $size_24;
+}
+
+.startLink {
+    display: block;
+    text-align: center;
+}

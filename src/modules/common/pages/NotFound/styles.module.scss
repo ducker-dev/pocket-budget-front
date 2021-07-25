@@ -1,0 +1,18 @@
+@import "src/styles/colors";
+@import "src/styles/constants";
+
+.notFound {
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &.notFoundBlack * {
+        color: $color-white-one;
+    }
+}
+
+.notFoundTitle {
+    font-size: $size_120;
+}

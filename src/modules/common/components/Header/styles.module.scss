@@ -1,0 +1,36 @@
+@import "src/styles/colors";
+@import "src/styles/constants";
+@import "src/styles/breakpoints";
+
+.header {
+    height: $headerHeight + $headerPB;
+
+    &.headerBlack {
+        background-color: $color-black-three;
+
+        & * {
+            color: $color-white-one;
+        }
+    }
+
+    &.headerLight {
+        background-color: $color-white-one;
+    }
+}
+
+.headerContent {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: $headerPB;
+
+    a,
+    button {
+        font-size: $size_16;
+    }
+}
+
+.headerLogo {
+    margin-right: $size_16;
+}
